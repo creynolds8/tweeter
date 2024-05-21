@@ -1,14 +1,14 @@
 $(() => {
   console.log("loaded!");
 
-  $("form textarea").on("input", () => {
-    let tweetLength = $("#tweet-text").val().length;
-    let counter = document.getElementById("counter");
-    counter.innerHTML = 140 - tweetLength;
-    if (counter.innerHTML <= 0) {
-      document.getElementById("counter").style.color = "red";
+  $("form textarea").on("input", function() {
+    let tweetLength = $(this).val().length;
+    let counter = $(this).siblings("#button-counter").find("#counter");
+    counter.html(140 - tweetLength);
+    if (counter.html() <= 0) {
+      counter.css('color', 'red');
     } else {
-      document.getElementById("counter").style.color = "inherit";
+      counter.css('color', 'inherit');
     }
   });
 });
