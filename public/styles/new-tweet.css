@@ -46,15 +46,6 @@
   font-size: smaller;
 }
 
-.new-tweet label::after {
-  content: '';
-  display: block;
-  height: 2px;
-  background-color: #545149;
-  width: 100%;
-  transition: all 0.3s ease;
-}
-
 #button-counter {
   display: flex;
   flex-direction: row;
