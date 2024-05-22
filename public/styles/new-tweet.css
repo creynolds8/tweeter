@@ -29,7 +29,10 @@
   background: transparent;
   position: relative;
   resize: none;
-  border: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 4px solid #545149;
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
