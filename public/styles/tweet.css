@@ -26,3 +26,17 @@ article footer {
   justify-content: space-between;
   font-size: smaller;
 }
+
+#icons {
+  color: #4056a1;
+  display: flex;
+  flex-direction: row;
+}
+
+#icons div {
+  padding: 0px 8px; 
+}
+
+#icons div:hover {
+  color: #cfb50f;
+}
