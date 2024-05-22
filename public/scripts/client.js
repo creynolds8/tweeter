@@ -5,6 +5,9 @@
  */
 
 const createTweetElement = function (tweet) {
+  const defaultImg = "https://i.imgur.com/73hZDYK.png";
+  const defaultName = 'DEV';
+  const defaultHandle = '@DEV'
   const newTweet = $(`
   <article class="tweet">
   <header>
@@ -65,8 +68,17 @@ const tweetData = [
 $(() => {
   renderTweets(tweetData);
 
-  $('form').on('submit', (event) => {
-  event.preventDefault();
-  
-})
+  $("form").on("submit", (event) => {
+    event.preventDefault();
+    console.log($("form").serialize());
+    $.ajax({
+      url: "http://localhost:8080/",
+    })
+      // .then((res) => {
+      //   createTweetElement(res.title);
+      // })
+      // .catch((err) => {
+      //   console.log(err);
+      // });
+  });
 });
