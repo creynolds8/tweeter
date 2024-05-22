@@ -6,8 +6,8 @@
 
 const createTweetElement = function (tweet) {
   const defaultImg = "https://i.imgur.com/73hZDYK.png";
-  const defaultName = 'DEV';
-  const defaultHandle = '@DEV'
+  const defaultName = "DEV";
+  const defaultHandle = "@DEV";
   const newTweet = $(`
   <article class="tweet">
   <header>
@@ -40,31 +40,35 @@ const renderTweets = function (tweets) {
   }
 };
 
-const loadTweets = function() {
+const loadTweets = function () {
   $.get({
-    url: 'http://localhost:8080/tweets'
-  })
-  .then(res => {
-    renderTweets(res)
-  })
-}
+    url: "http://localhost:8080/tweets",
+  }).then((res) => {
+    renderTweets(res);
+  });
+};
 
 $(() => {
-  loadTweets()
-  // renderTweets(tweetData);
+  loadTweets();
 
   $("form").on("submit", (event) => {
     event.preventDefault();
     console.log($("form").serialize());
+    let tweet = $('#tweet-text').val();
+    let tweetLength = tweet.length;
+    if (tweetLength > 140) {
+      alert('too long')
+    } else if (tweetLength === 0) {
+      alert('add text') 
+    } else {
     $.post({
       // type: 'post',
       url: "/tweets",
+      data: $("form").serialize()
     })
-      // .then((res) => {
-      //   createTweetElement(res.title);
-      // })
-      // .catch((err) => {
-      //   console.log(err);
-      // });
+    .then(() => {
+      loadTweets();
+    })
+  }
   });
 });
