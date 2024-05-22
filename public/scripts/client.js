@@ -5,8 +5,7 @@
  */
 
 $(() => {
-
-  const createTweetElement = function(tweet) {
+  const createTweetElement = function (tweet) {
     const newTweet = $(`
     <article class="tweet">
     <header>
@@ -28,10 +27,7 @@ $(() => {
         <div>
           <i class="fa-solid fa-flag"></i>
         </div>
-      </div>`)
-  }
-
-
-
-
-})
+      </div>`);
+    return newTweet;
+  };
+});
