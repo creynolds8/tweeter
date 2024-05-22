@@ -25,6 +25,7 @@ article.tweet:hover {
 .tweet span img {
   width: 2em;
   height: 2em;
+  margin-right: 0.75em;
 }
 
 .tweet p {
