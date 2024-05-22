@@ -12,6 +12,18 @@ article.tweet:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+}
+
+.tweet span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.tweet span img {
+  width: 2em;
+  height: 2em;
 }
 
 .tweet p {
