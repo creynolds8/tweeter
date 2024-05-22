@@ -64,4 +64,9 @@ const tweetData = [
 
 $(() => {
   renderTweets(tweetData);
+
+  $('form').on('submit', (event) => {
+  event.preventDefault();
+  
+})
 });
