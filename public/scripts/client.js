@@ -57,9 +57,9 @@ $(() => {
     let tweet = $('#tweet-text').val();
     let tweetLength = tweet.length;
     if (tweetLength > 140) {
-      alert('too long')
+      alert('Sorry, that tweet is too long.\nPlease remove some text')
     } else if (tweetLength === 0) {
-      alert('add text') 
+      alert('Sorry, that tweet is too short.\nPlease enter some text') 
     } else {
     $.post({
       // type: 'post',
