@@ -1,6 +1,4 @@
 $(() => {
-  console.log("loaded!");
-
   $("form textarea").on("input", function() {
     let tweetLength = $(this).val().length;
     let counter = $(this).siblings("#button-counter").find("#counter");
