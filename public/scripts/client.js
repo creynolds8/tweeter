@@ -65,14 +65,25 @@ const tweetData = [
   },
 ];
 
+const loadTweets = function() {
+  $.get({
+    url: 'http://localhost:8080/tweets'
+  })
+  .then(res => {
+    renderTweets(res)
+  })
+}
+
 $(() => {
-  renderTweets(tweetData);
+  loadTweets()
+  // renderTweets(tweetData);
 
   $("form").on("submit", (event) => {
     event.preventDefault();
     console.log($("form").serialize());
-    $.ajax({
-      url: "http://localhost:8080/",
+    $.post({
+      // type: 'post',
+      url: "/tweets",
     })
       // .then((res) => {
       //   createTweetElement(res.title);
