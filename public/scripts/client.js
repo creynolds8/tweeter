@@ -54,8 +54,7 @@ $(() => {
   $("form").on("submit", (event) => {
     event.preventDefault();
     console.log($("form").serialize());
-    let tweet = $('#tweet-text').val();
-    let tweetLength = tweet.length;
+    let tweetLength = $('#tweet-text').val().length;
     if (tweetLength > 140) {
       alert('Sorry, that tweet is too long.\nPlease remove some text')
     } else if (tweetLength === 0) {
