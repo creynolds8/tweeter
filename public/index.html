@@ -5,7 +5,11 @@
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      type="text/css"
+    />
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -16,10 +20,19 @@
 
     <!-- add Font families-->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -28,11 +41,18 @@
     <script type="text/javascript" src="/scripts/client.js"></script>
 
     <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <!-- Char Counter -->
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-
+    <script
+      type="text/javascript"
+      src="/scripts/composer-char-counter.js"
+    ></script>
   </head>
 
   <body>
@@ -41,27 +61,29 @@
       <div class="nav-bar">
         <span>Tweeter</span>
       </div>
-        <div class="new-tweet-link">
-          <span>Write a new tweet</span>
-          <span><i class="fa-solid fa-angles-down"></i></span>
+      <div class="new-tweet-link">
+        <span>Write a new tweet</span>
+        <span><i class="fa-solid fa-angles-down"></i></span>
       </div>
     </nav>
-      
+
     <header id="header">
-        <div>
-          <img src="/images/profile-hex.png"> 
-        </div>
-        <div>
-          <h2>Cam</h2>
-        </div>
-  </header>
+      <div>
+        <img src="/images/profile-hex.png" />
+      </div>
+      <div>
+        <h2>Cam</h2>
+      </div>
+    </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="post" action="/tweets/">
           <textarea name="text" id="tweet-text" placeholder=" "></textarea>
-          <label id="tweet-text-label" for="tweet-text">What are you humming about?</label>
+          <label id="tweet-text-label" for="tweet-text"
+            >What are you humming about?</label
+          >
           <div id="button-counter">
             <button type="submit">Tweet</button>
             <output name="counter" id="counter" for="tweet-text">140</output>
@@ -71,27 +93,31 @@
       <section id="tweets-container">
         <article class="tweet">
           <header>
-            <div>
-              picture and name
-            </div>
+            <div>picture and name</div>
             handle
           </header>
           <body>
             <p>
-
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam expedita optio temporibus odit vero, inventore ab beatae consequatur nemo!
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam
+              expedita optio temporibus odit vero, inventore ab beatae
+              consequatur nemo!
             </p>
-            </body>
+          </body>
           <footer>
-            date 
-            <div>
-              <i class="fa-solid fa-heart"></i>
-              <i class="fa-solid fa-flag"></i>
-              <i class="fa-solid fa-retweet"></i>
+            date
+            <div id="icons">
+              <div>
+                <i class="fa-solid fa-heart"></i>
+              </div>
+              <div>
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+              <div>
+                <i class="fa-solid fa-flag"></i>
+              </div>
             </div>
           </footer>
         </article>
-
       </section>
     </main>
   </body>
