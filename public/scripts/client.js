@@ -5,13 +5,11 @@
  */
 
 const createTweetElement = function (tweet) {
-  const defaultImg = "https://i.imgur.com/73hZDYK.png";
-  const defaultName = "DEV";
-  const defaultHandle = "@DEV";
+  const username = tweet.user.name
   const newTweet = $(`
   <article class="tweet">
   <header>
-  <span><img src=${tweet.user.avatars}/>${tweet.user.name}</span>
+  <span><img src=${tweet.user.avatars}/>${safeText(username)}</span>
   ${tweet.user.handle}
   </header>
   <p>
@@ -47,6 +45,12 @@ const loadTweets = function () {
     $('#tweets-container').empty();
     renderTweets(res);
   });
+};
+
+const safeText = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 };
 
 $(() => {
