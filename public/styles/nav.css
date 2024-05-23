@@ -1,6 +1,7 @@
 nav {
   height: 120px;
-  background-color: #4056a1;
+  background-color: rgb(106, 194, 106);
+  background-image: url("../images/asfalt-light.png");
   color: #ffffff;
   width: 100%;
   padding: 1.5em;
