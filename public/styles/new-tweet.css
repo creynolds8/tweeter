@@ -1,20 +1,19 @@
 .new-tweet {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
+  width: 90%;
   padding-bottom: 50px;
   display: none;
+  margin: auto;
+  position: relative;
+  z-index: 10;
 }
 
-.new-tweet h2 {
-  margin-bottom: 1.5em;
-}
 .new-tweet form {
   display: flex;
   flex-direction: column;
   position: relative;
   width: 60%;
+  margin: auto;
+  margin-top: 30px;
 }
 
 .new-tweet label {
