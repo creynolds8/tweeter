@@ -14,7 +14,9 @@ const createTweetElement = function (tweet) {
   const newTweet = $(`
   <article class="tweet">
   <header>
-  <span><img src=${safeText(tweet.user.avatars)}/>${safeText(tweet.user.name)}</span>
+  <span><img src=${safeText(tweet.user.avatars)}/>${safeText(
+    tweet.user.name
+  )}</span>
   ${safeText(tweet.user.handle)}
   </header>
   <p>
@@ -47,48 +49,48 @@ const loadTweets = function () {
   $.get({
     url: "http://localhost:8080/tweets",
   }).then((res) => {
-    $('#tweets-container').empty();
+    $("#tweets-container").empty();
     renderTweets(res);
   });
 };
 
 const toggleNewTweet = function () {
-  const display = $('.new-tweet').css('display');
-    if (display === 'none') {
-      $('.new-tweet').css('display', 'flex');
-      $('#tweets-container').css('margin', 'auto')
-    }
-    if (display === 'flex') {
-      $('.new-tweet').css('display', 'none');
-      $('#tweets-container').css('margin-top', 150)
-    }
+  if ($(".new-tweet").is(":visible")) {
+    $(".new-tweet").slideUp(2000);
+  } else {
+    $(".new-tweet").slideDown(1000);
+    $("#tweets-container").css("margin-top", "0");
+    $("#tweet-text").focus();
+  }
 };
 
 $(() => {
   loadTweets();
 
-  // add event handler to leverage jQuery to hide and show compose tweet section
-  $('.new-tweet-link').on('click', event => {
+  $(".new-tweet-link").on("click", (event) => {
     toggleNewTweet();
-  })
+  });
 
   $("form").on("submit", (event) => {
     event.preventDefault();
     console.log($("form").serialize());
     let tweetLength = $("#tweet-text").val().length;
     if (tweetLength > 140) {
-      $('#error-message span').removeAttr('hidden').text("Sorry, that tweet is too long.\nPlease remove some text");
+      $("#error-message span")
+        .removeAttr("hidden")
+        .text("Sorry, that tweet is too long.\nPlease remove some text");
     } else if (tweetLength === 0) {
-      $('#error-message span').removeAttr('hidden').text("Sorry, that tweet is too short.\nPlease enter some text");
+      $("#error-message span")
+        .removeAttr("hidden")
+        .text("Sorry, that tweet is too short.\nPlease enter some text");
     } else {
       $.post({
         url: "/tweets",
         data: $("form").serialize(),
-      })
-      .then(() => {
+      }).then(() => {
         loadTweets();
-        $('form textarea').val('');
-        $('#counter').val(140);
+        $("form textarea").val("");
+        $("#counter").val(140);
       });
     }
   });
