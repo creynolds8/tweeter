@@ -70,16 +70,16 @@
     </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <div id="inner-container">
       <section id="error-message">
         <span hidden></span>
       </section>
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <!-- <h2>Compose Tweet</h2> -->
         <form method="post" action="/tweets/">
           <textarea name="text" id="tweet-text" placeholder=" "></textarea>
           <label id="tweet-text-label" for="tweet-text"
-            >What are you humming about?</label
-          >
+          >What are you humming about?</label>
           <div id="button-counter">
             <button type="submit">Tweet</button>
             <output name="counter" id="counter" for="tweet-text">140</output>
@@ -88,6 +88,7 @@
       </section>
       <section id="tweets-container">
       </section>
+    </div>
     </main>
   </body>
 </html>
