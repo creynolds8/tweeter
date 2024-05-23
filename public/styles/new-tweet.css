@@ -35,8 +35,10 @@
   border-bottom: 4px solid #545149;
   width: 100%;
   padding: 10px;
+  padding-bottom: 0px;
   box-sizing: border-box;
   cursor: text;
+  line-height: 1rem;
 }
 
 .new-tweet textarea:focus + label {
@@ -47,6 +49,10 @@
 .new-tweet textarea:not(:placeholder-shown) + label {
   top: -30px;
   font-size: smaller;
+}
+
+.new-tweet textarea:focus {
+  outline: none;
 }
 
 #button-counter {
