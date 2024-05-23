@@ -55,6 +55,12 @@ const loadTweets = function () {
 $(() => {
   loadTweets();
 
+  // add event handler to leverage jQuery to hide and show compose tweet section
+  $('.new-tweet-link').on('click', event => {
+    $('.new-tweet').css('display', 'flex');
+    $('#tweets-container').css('margin', 'auto')
+  })
+
   $("form").on("submit", (event) => {
     event.preventDefault();
     console.log($("form").serialize());
