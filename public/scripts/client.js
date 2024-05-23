@@ -44,6 +44,7 @@ const loadTweets = function () {
   $.get({
     url: "http://localhost:8080/tweets",
   }).then((res) => {
+    $('#tweets-container').empty();
     renderTweets(res);
   });
 };
