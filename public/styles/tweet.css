@@ -1,5 +1,9 @@
 #tweets-container {
-  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  align-items: center;
 }
 
 article.tweet {
