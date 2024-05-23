@@ -71,6 +71,7 @@ $(() => {
       .then(() => {
         loadTweets();
         $('form textarea').val('');
+        $('#counter').val(140);
       });
     }
   });
