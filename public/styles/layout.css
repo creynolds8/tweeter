@@ -29,15 +29,6 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-/* .new-tweet {
-  margin: auto;
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  background-color: inherit;
-  padding-bottom: 50px;
-} */
-
 @media only screen and (min-width: 1024px) {
   body {
     display: flex;
