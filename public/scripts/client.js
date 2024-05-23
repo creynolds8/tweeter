@@ -52,13 +52,24 @@ const loadTweets = function () {
   });
 };
 
+const toggleNewTweet = function () {
+  const display = $('.new-tweet').css('display');
+    if (display === 'none') {
+      $('.new-tweet').css('display', 'flex');
+      $('#tweets-container').css('margin', 'auto')
+    }
+    if (display === 'flex') {
+      $('.new-tweet').css('display', 'none');
+      $('#tweets-container').css('margin-top', 150)
+    }
+};
+
 $(() => {
   loadTweets();
 
   // add event handler to leverage jQuery to hide and show compose tweet section
   $('.new-tweet-link').on('click', event => {
-    $('.new-tweet').css('display', 'flex');
-    $('#tweets-container').css('margin', 'auto')
+    toggleNewTweet();
   })
 
   $("form").on("submit", (event) => {
