@@ -60,9 +60,9 @@ $(() => {
     console.log($("form").serialize());
     let tweetLength = $("#tweet-text").val().length;
     if (tweetLength > 140) {
-      alert("Sorry, that tweet is too long.\nPlease remove some text");
+      $('#error-message span').removeAttr('hidden').text("Sorry, that tweet is too long.\nPlease remove some text");
     } else if (tweetLength === 0) {
-      alert("Sorry, that tweet is too short.\nPlease enter some text");
+      $('#error-message span').removeAttr('hidden').text("Sorry, that tweet is too short.\nPlease enter some text");
     } else {
       $.post({
         url: "/tweets",
