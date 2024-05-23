@@ -4,19 +4,24 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+const safeText = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = function (tweet) {
-  const username = tweet.user.name
   const newTweet = $(`
   <article class="tweet">
   <header>
-  <span><img src=${tweet.user.avatars}/>${safeText(username)}</span>
-  ${tweet.user.handle}
+  <span><img src=${safeText(tweet.user.avatars)}/>${safeText(tweet.user.name)}</span>
+  ${safeText(tweet.user.handle)}
   </header>
   <p>
-  ${tweet.content.text}
+  ${safeText(tweet.content.text)}
   </p>
   <footer>
-  ${timeago.format(tweet.created_at)}
+  ${safeText(timeago.format(tweet.created_at))}
   <div class="icons">
   <div>
   <i class="fa-solid fa-heart"></i>
@@ -45,12 +50,6 @@ const loadTweets = function () {
     $('#tweets-container').empty();
     renderTweets(res);
   });
-};
-
-const safeText = function (str) {
-  let div = document.createElement("div");
-  div.appendChild(document.createTextNode(str));
-  return div.innerHTML;
 };
 
 $(() => {
