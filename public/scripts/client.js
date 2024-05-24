@@ -4,19 +4,18 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const safeText = function (str) {
+const safeText = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
-const createTweetElement = function (tweet) {
+const createTweetElement = function(tweet) {
   const newTweet = $(`
   <article class="tweet">
   <header>
-  <span><img src=${safeText(tweet.user.avatars)}/>${safeText(
-    tweet.user.name
-  )}</span>
+  <span><img src=${safeText(tweet.user.avatars)}/>
+  ${safeText(tweet.user.name)}</span>
   ${safeText(tweet.user.handle)}
   </header>
   <p>
@@ -38,14 +37,14 @@ const createTweetElement = function (tweet) {
   return newTweet;
 };
 
-const renderTweets = function (tweets) {
+const renderTweets = function(tweets) {
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
     $("#tweets-container").prepend($tweet);
   }
 };
 
-const loadTweets = function () {
+const loadTweets = function() {
   $.get({
     url: "http://localhost:8080/tweets",
   }).then((res) => {
@@ -54,7 +53,7 @@ const loadTweets = function () {
   });
 };
 
-const toggleNewTweet = function () {
+const toggleNewTweet = function() {
   if ($(".new-tweet").is(":visible")) {
     $(".new-tweet").slideUp(2000);
   } else {
@@ -64,7 +63,7 @@ const toggleNewTweet = function () {
   }
 };
 
-const validateTweet = function (length) {
+const validateTweet = function(length) {
   if (length > 140) {
     $("#error-message span")
       .css("display", "block")
@@ -89,7 +88,7 @@ const validateTweet = function (length) {
 $(() => {
   loadTweets();
 
-  $(".new-tweet-link").on("click", (event) => {
+  $(".new-tweet-link").on("click", () => {
     toggleNewTweet();
   });
 
