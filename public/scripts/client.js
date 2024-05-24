@@ -72,6 +72,7 @@ const validateTweet = function (length) {
     setTimeout(() => {
       $("#error-message span").css("display", "none");
     }, 6000);
+    return false;
   } else if (length === 0) {
     $("#error-message span")
       .css("display", "block")
@@ -80,6 +81,7 @@ const validateTweet = function (length) {
       $("#error-message span").css("display", "none");
       $("#counter").css("color", "#333");
     }, 6000);
+    return false;
   }
   return true;
 };
