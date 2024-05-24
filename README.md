@@ -6,8 +6,9 @@ This project utilizes jQuery, Javascript, HTML, and CSS to provide a pleasant an
 
 ## Final Product
 
-  screenshot
-  screenshot
+  ![Screenshot of default desktop layout]()
+  ![Screenshot of desktop layout with error message displayed]()
+  ![Screenshot of mobile layout]()
 
 ## Getting Started
 
