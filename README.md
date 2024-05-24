@@ -30,3 +30,7 @@ This project utilizes jQuery, Ajax, Javascript, HTML, and CSS to provide a pleas
 #### Please reach out on Discord if you have any questions, concerns, or issues!
 
 #### Discord Username: @fuzzyslippers256
+
+##### Note: 
+
+I decided to implement the stretch functionality of sliding the Compose Tweet section up and down by clicking on the Write New Tweet area in the navigation bar. Initially I had some trouble implementing this, first getting it to work at all, then to make the sliding itself look good. I also decided to have the icon under Write New Tweet turn red when hovering over that section and even gave the icon a little anitmation similar to what was shown in some of the Compass activities. With some help from a mentor and Larry, I was able to get both of these animations working and looking how I wanted to. I am very glad I put the time in to get these two features working as I feel it adds a lot to the feel of the site.
