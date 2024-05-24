@@ -67,12 +67,18 @@ const toggleNewTweet = function () {
 const validateTweet = function (length) {
   if (length > 140) {
     $("#error-message span")
-      .removeAttr("hidden")
+      .css("display", 'block')
       .text("Sorry, that tweet is too long.\nPlease remove some text");
+    setTimeout(() => {
+      $("#error-message span").css('display', 'none')
+    }, 6000)
   } else if (length === 0) {
     $("#error-message span")
-      .removeAttr("hidden")
+      .css("display", 'block')
       .text("Sorry, that tweet is too short.\nPlease enter some text");
+     setTimeout(() => {
+        $("#error-message span").css('display', 'none')
+      }, 6000)
   }
 };
 
