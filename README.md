@@ -25,3 +25,7 @@ This project utilizes jQuery, Javascript, HTML, and CSS to provide a pleasant an
 - md5
 
 ### Created by Cameron Reynolds during Web Development Bootcamp at Lighthouse Labs
+
+#### Please reach out on Discord if you have any questions, concerns, or issues!
+
+#### Discord Username: @fuzzyslippers256
