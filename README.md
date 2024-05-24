@@ -4,6 +4,11 @@ Tweeter is a simple, single-page Twitter clone.
 
 This project utilizes jQuery, Javascript, HTML, and CSS to provide a pleasant and familiar user experience similar to one they would be accustomed to from other social media sites.
 
+## Final Product
+
+  screenshot
+  screenshot
+
 ## Getting Started
 
 1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
@@ -19,3 +24,4 @@ This project utilizes jQuery, Javascript, HTML, and CSS to provide a pleasant an
 - Chance
 - md5
 
+### Created by Cameron Reynolds during Web Development Bootcamp at Lighthouse Labs
