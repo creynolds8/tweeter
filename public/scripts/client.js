@@ -78,7 +78,6 @@ const validateTweet = function(length) {
       .text("Sorry, that tweet is too short.\nPlease enter some text");
     setTimeout(() => {
       $("#error-message span").css("display", "none");
-      $("#counter").css("color", "#333");
     }, 6000);
     return false;
   }
