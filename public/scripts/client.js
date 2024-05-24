@@ -64,6 +64,18 @@ const toggleNewTweet = function () {
   }
 };
 
+const validateTweet = function (length) {
+  if (length > 140) {
+    $("#error-message span")
+      .removeAttr("hidden")
+      .text("Sorry, that tweet is too long.\nPlease remove some text");
+  } else if (length === 0) {
+    $("#error-message span")
+      .removeAttr("hidden")
+      .text("Sorry, that tweet is too short.\nPlease enter some text");
+  }
+};
+
 $(() => {
   loadTweets();
 
@@ -73,25 +85,17 @@ $(() => {
 
   $("form").on("submit", (event) => {
     event.preventDefault();
-    console.log($("form").serialize());
+
     let tweetLength = $("#tweet-text").val().length;
-    if (tweetLength > 140) {
-      $("#error-message span")
-        .removeAttr("hidden")
-        .text("Sorry, that tweet is too long.\nPlease remove some text");
-    } else if (tweetLength === 0) {
-      $("#error-message span")
-        .removeAttr("hidden")
-        .text("Sorry, that tweet is too short.\nPlease enter some text");
-    } else {
-      $.post({
-        url: "/tweets",
-        data: $("form").serialize(),
-      }).then(() => {
-        loadTweets();
-        $("form textarea").val("");
-        $("#counter").val(140);
-      });
-    }
+    validateTweet(tweetLength);
+
+    $.post({
+      url: "/tweets",
+      data: $("form").serialize(),
+    }).then(() => {
+      loadTweets();
+      $("form textarea").val("");
+      $("#counter").val(140);
+    });
   });
 });
