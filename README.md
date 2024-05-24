@@ -6,9 +6,9 @@ This project utilizes jQuery, Javascript, HTML, and CSS to provide a pleasant an
 
 ## Final Product
 
-  ![Screenshot of default desktop layout]()
-  ![Screenshot of desktop layout with error message displayed]()
-  ![Screenshot of mobile layout]()
+  ![Screenshot of default desktop layout](https://github.com/creynolds8/tweeter/blob/master/docs/default-desktop.png?raw=true)
+  ![Screenshot of desktop layout with error message displayed](https://github.com/creynolds8/tweeter/blob/master/docs/desktop-error.png?raw=true)
+  ![Screenshot of mobile layout](https://github.com/creynolds8/tweeter/blob/master/docs/mobile-view.png?raw=true)
 
 ## Getting Started
 
