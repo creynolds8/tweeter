@@ -80,8 +80,8 @@ const validateTweet = function (length) {
       $("#error-message span").css("display", "none");
       $("#counter").css("color", "#333");
     }, 6000);
-    return true;
   }
+  return true;
 };
 
 $(() => {
