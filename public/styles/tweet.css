@@ -60,6 +60,6 @@ article.tweet:hover {
 }
 
 .icons i:hover {
-  color: #cfb50f;
+  color: rgb(33, 197, 33);
   cursor: pointer;
 }
